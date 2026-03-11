@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iOS Calculator UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="phone">
+  <div class="calculator">
+
+    <!-- Display -->
+    <div class="display">
+     <!-- History Button -->
+<button id="openHistory" class="history-btn" title="Open History">
+  <i class="fa-solid fa-clock-rotate-left"></i>
+</button>
+
+<!-- History Modal (Hidden by default) -->
+<div id="historyModal" class="history-modal hidden">
+  <div class="history-card">
+    <div class="history-head">
+      <span>History</span>
+      <button id="closeHistory" class="close-btn">✕</button>
+    </div>
+    <ul id="historyList"></ul>
+   <button id="clearHistory" class="clear-btn">Clear</button>
+
+  </div>
+</div>
+
+
+      <!-- Mic + Language -->
+      <div class="mic-wrap">
+        <button id="mic" class="mic" title="Tap to speak">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+
+        <select id="langSelect" class="lang-select">
+          <option value="hi">Hindi</option>
+          <option value="bh">Bhojpuri</option>
+          <option value="en">English</option>
+        </select>
+
+        <span class="mic-text">Tap & Speak</span>
+        <div class="mic-wave">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="expression"></div>
+      <input type="text" placeholder="0" id="val" readonly>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="btn gray del">⌫</button>
+      <button class="btn gray">AC</button>
+      <button class="btn gray">%</button>
+      <button class="btn orange">÷</button>
+
+      <button class="btn dark">7</button>
+      <button class="btn dark">8</button>
+      <button class="btn dark">9</button>
+      <button class="btn orange">×</button>
+
+      <button class="btn dark">4</button>
+      <button class="btn dark">5</button>
+      <button class="btn dark">6</button>
+      <button class="btn orange">−</button>
+
+      <button class="btn dark">1</button>
+      <button class="btn dark">2</button>
+      <button class="btn dark">3</button>
+      <button class="btn orange">+</button>
+
+      <button class="btn dark">+/-</button>
+      <button class="btn dark">0</button>
+      <button class="btn dark">.</button>
+      <button class="btn orange">=</button>
+    </div>
+
+  
+
+</div>
+
+<audio id="clickSound" src="./universfield-computer-mouse-click-352734.mp3"></audio>
+<script src="app.js"></script>
+</body>
+</html>
